@@ -1,0 +1,34 @@
+{
+  "name": "@thedesignsystem/button",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gstvribs/monorepo-angular-component-library.git"
+  },
+  "author": {
+    "name": "Gustavo Ribeiro",
+    "email": "gu_ribeiro@live.com",
+    "url": "https://twitter.com/gstvribs"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "ng-packagr -p package.json",
+    "test": "ng test button --watch=true",
+    "test:ci": "ng test button --watch=false"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "./src/index.ts"
+    },
+    "dest": "dist/"
+  }
+}
